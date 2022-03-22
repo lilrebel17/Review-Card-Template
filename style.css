@@ -1,0 +1,73 @@
+:root {
+    --main-clr: #4D7298;
+}
+
+body {
+    margin: 0;
+}
+.review-card {
+    margin-left: 2%;
+    margin-top: 2%;
+    width: 95%;
+    height: 80%;
+    text-align: center;
+    border: outset 8px var(--main-clr);
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,.2);
+    display: grid;
+    grid-template: 3 4;
+}
+
+.review-header {
+    grid-row: 1/1;
+    grid-column: 1/4;
+    text-align: center;
+    border-bottom: solid 10px var(--main-clr);
+    color: var(--main-clr)
+}
+
+.review-img {
+    width: 100%;
+    height: 100%;
+    grid-column: 1/2;
+    grid-row: 2/3
+}
+
+.review-content {
+    font-weight: bold;
+    text-align:center;
+    font-size: x-large;
+    color:var(--main-clr);
+    grid-column: 3/4;
+    grid-row: 2/2;
+}
+
+.reviewer-information {
+    color: var(--main-clr);
+    margin: 0;
+    border-top: solid 10px var(--main-clr);
+    border-bottom: solid 5px var(--main-clr);
+    grid-column: 1/4;
+    grid-row: 3/3;
+}
+
+
+.scroll-btn-container {
+    font-size: 3vw;
+    background-color: transparent;
+    grid-column: 1/4;
+    grid-row: 4/4;
+    display: flex;
+}
+
+button {
+    background-color: transparent;
+    border-top: solid 5px var(--main-clr);
+    color: var(--main-clr);
+    width: 100%;
+    font-size: 3vw;
+    cursor:pointer;
+}
+
+button:active {
+    border-top: solid 5px black;
+}
