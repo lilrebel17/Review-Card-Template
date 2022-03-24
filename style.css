@@ -1,64 +1,53 @@
 :root {
     --main-clr: #4D7298;
 }
-
-body {
-    margin: 0;
+body{
+    width: 95%;
 }
 .review-card {
-    margin-left: 2%;
-    margin-top: 2%;
-    width: 95%;
-    height: 80%;
     text-align: center;
     border: outset 8px var(--main-clr);
     box-shadow: 10px 10px 10px 10px rgba(0,0,0,.2);
     display: grid;
     grid-template: 3 4;
 }
-
 .review-header {
     grid-row: 1/1;
     grid-column: 1/4;
-    text-align: center;
     border-bottom: solid 10px var(--main-clr);
-    color: var(--main-clr)
+    color: var(--main-clr);
+    font-size: 2vw;
 }
-
-.review-img {
-    width: 100%;
-    height: 100%;
-    grid-column: 1/2;
-    grid-row: 2/3
+.reviewer-image {
+    width: 300px;
+    grid-column: 1/3;
+    grid-row: 2/3;
 }
-
 .review-content {
+    margin: 15% 0 2% 2%;
+    font-size: 2vw;
+    font-stretch:  expanded;
     font-weight: bold;
-    text-align:center;
-    font-size: x-large;
     color:var(--main-clr);
     grid-column: 3/4;
-    grid-row: 2/2;
+    grid-row: 2/4;
 }
-
 .reviewer-information {
+    font-size: 1.5vw;
     color: var(--main-clr);
     margin: 0;
-    border-top: solid 10px var(--main-clr);
-    border-bottom: solid 5px var(--main-clr);
-    grid-column: 1/4;
+    border: solid 5px var(--main-clr);
+    border-left: none;
+    grid-column: 1/3;
     grid-row: 3/3;
 }
-
-
 .scroll-btn-container {
-    font-size: 3vw;
+    font-size: 2em;
     background-color: transparent;
     grid-column: 1/4;
     grid-row: 4/4;
     display: flex;
 }
-
 button {
     background-color: transparent;
     border-top: solid 5px var(--main-clr);
@@ -67,7 +56,45 @@ button {
     font-size: 3vw;
     cursor:pointer;
 }
-
 button:active {
     border-top: solid 5px black;
+}
+
+@media only screen and (max-width: 440px) {
+    .reviewer-image {
+        display: none;
+    }
+    .reviewer-information {
+        grid-row: 2/4;
+        border-top: none;
+        font-size: 2vw;
+    }
+    .review-content {
+        margin: initial;
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .reviewer-image {
+        width: 200px;
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width:1440px) {
+    .reviewer-image {
+        width: 600px;
+        height: auto;
+    }
+    .review-content {
+        font-size: 2.5vw;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .reviewer-image {
+        width: 800px;
+        height:550px;
+    }
 }
