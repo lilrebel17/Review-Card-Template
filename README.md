@@ -7,10 +7,9 @@
 # Documentation
 
 - How to put into your project
-  - Copy index.html wherever your wanting it in your project
+  - Copy index.html's body into your project
   - Copy the contents of style.css into your main css file
-  - link reviewer.js
-  - You dont have to keep the head portion of the HTML file just the divs from review-card to button forward-button
+  - link reviewer.js in your HTML
 
 - Add/Edit Reviewers
   - Go into Index.js
